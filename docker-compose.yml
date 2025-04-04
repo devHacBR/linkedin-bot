@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  linkedin-bot:
+    build: .
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./messages.json:/app/messages.json
+      - ./chrome:/root/.config/google-chrome
+    environment:
+      - DISPLAY=:99
+    stdin_open: true
+    tty: true
