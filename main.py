@@ -12,7 +12,7 @@ with open("messages.json", "r") as f:
     messages = json.load(f)
 
 def init_db():
-    conn = sqlite3.connect("db.sqlite3")
+    conn = sqlite3.connect("data/db.sqlite3")
     cursor = conn.cursor()
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS leads (

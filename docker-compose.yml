@@ -4,7 +4,7 @@ services:
   linkedin-bot:
     build: .
     volumes:
-      - ./db.sqlite3:/app/db.sqlite3
+      - ./data:/app/data
       - ./messages.json:/app/messages.json
       - ./chrome:/root/.config/google-chrome
     environment:
